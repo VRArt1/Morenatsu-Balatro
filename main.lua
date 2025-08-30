@@ -19,6 +19,16 @@ else
 end
 
 -- Quips
+SMODS.Atlas{
+	key = 'morenatsu_sprites',
+		px = 127,
+		py = 158,
+		path = "morenatsu_sprites.png",
+	}
+
+-- Seals
+-- SMODS.load_error("seals.lua")()
+
 if morenatsu_config.morenatsuquips then
 -- assert(SMODS.load_file("quips.lua"))() -- Testing
 SMODS.load_file("quips.lua")()
@@ -37,7 +47,7 @@ SMODS.load_file("jokers.lua")()
 
 -- Malverk file
 -- assert(SMODS.load_file("malverk.lua"))() -- Testing
-SMODS.load_file("malverk.lua")()
+-- SMODS.load_file("malverk.lua")()
 
 -- Modicon
 SMODS.Atlas {

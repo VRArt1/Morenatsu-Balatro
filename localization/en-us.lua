@@ -44,10 +44,10 @@ return {
 			-- Losses
 			mor_juuichiloss = {''},
 			mor_kounosukeloss = {''},
-			mor_kouyaloss = {''},
+			mor_kouyaloss = {'Don\'t give up the fight!'},
 			mor_kyoujiloss = {''},
 			mor_shinloss = {''},
-			mor_shunloss = {''},
+			mor_shunloss = {'It\'s alright! Woof!','You can try again!'},
 			mor_soutarouloss = {''},
 			mor_tatsukiloss = {''},
 			mor_torahikoloss = {''},
