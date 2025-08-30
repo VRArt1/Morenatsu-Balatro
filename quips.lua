@@ -1,7 +1,7 @@
 MORENATSUBLUE = HEX("0082c8")
 MORENATSUDARKBLUE = HEX("022169")
 
-BLUESUMMER = HEX("0082c8"), HEX("022169"), G.C.WHITE
+BLUESUMMER = HEX("0082c8"), HEX("022169"), HEX("FFFFFF")
 
 -- Character = Key
 JuuichiWin = 'j_mor_juuichiwin'

@@ -22,7 +22,7 @@ end
 SMODS.Atlas{
 	key = 'morenatsu_sprites',
 		px = 127,
-		py = 158,
+		py = 171,
 		path = "morenatsu_sprites.png",
 	}
 

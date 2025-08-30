@@ -9,5 +9,5 @@
 	"priority": 0,
 	"badge_colour": "0082c8",
 	"version": "1.0.0",
-	-- "dependencies": ["malverk"],
+	"dependencies": ["malverk"],
 }
