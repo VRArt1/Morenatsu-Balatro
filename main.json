@@ -1,0 +1,13 @@
+{
+	"id": "morenatsu",
+	"name": "Morenatsu",
+	"display_name": "Morenatsu",
+	"author": ["V--R"],
+	"description": "Face cards, a joker, and main menu logo featuring characters from Morenatsu.",
+	"prefix": "mor",
+	"main_file": "main.lua",
+	"priority": 0,
+	"badge_colour": "c90c0c",
+	"version": "1.0.0",
+	"dependencies": ["malverk"],
+}
