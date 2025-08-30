@@ -34,7 +34,7 @@ SMODS.current_mod.config_tab = function()
 					nodes = {
 					create_toggle {
 						label = localize('morlogo'),
-						ref_table = more_config,
+						ref_table = morenatsu_config,
 						ref_value = 'morenatsulogo'
 						},
 					},
@@ -50,7 +50,7 @@ SMODS.current_mod.config_tab = function()
 					nodes = {
 					  create_toggle {
 						label = localize('morquips'),
-						ref_table = more_config,
+						ref_table = morenatsu_config,
 						ref_value = 'morenatsuquips'
 						},
 					},
