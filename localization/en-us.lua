@@ -5,9 +5,9 @@ return {
 			j_mor_nanafuse={
                 name="Nanafuse",
                 text={
-                    "After 7 turns self destructs.",
-                    "Does something. I don't know",
-                    "what yet. But something.",
+					"Creates a {C:tarot}Tarot{} card",
+					"at end of each round",
+                    "for {C:attention}7{} rounds",
                 },
 			},
 		}
