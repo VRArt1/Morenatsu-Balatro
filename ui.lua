@@ -27,39 +27,109 @@ SMODS.current_mod.config_tab = function()
 		},
 		{
 			n = G.UIT.R,
-			config = { align = 'cl', tooltip = {text = {"Changes main menu logo."}},},
-			nodes = {
-				{
-					n = G.UIT.C,
-					nodes = {
-					create_toggle {
-						label = localize('morlogo'),
-						ref_table = morenatsu_config,
-						ref_value = 'morenatsulogo'
-						},
-					},
-				},
+			config = {
+			padding = 0.25,
+			align = "cm"
 			},
-		},
-		{
-			n = G.UIT.R,
-			config = { tooltip = {text = {"Adds custom quips."}},},
 			nodes = {
 				{
 					n = G.UIT.C,
-					nodes = {
-					  create_toggle {
-						label = localize('morquips'),
-						ref_table = morenatsu_config,
-						ref_value = 'morenatsuquips'
-						},
+					config = {
+					padding = 0.25,
+					align = "cm"
 					},
+					nodes = {
+					-- Quips
+						{
+							n = G.UIT.R,
+							config = {
+								align ='cm',
+								tooltip = {text = {localize('morquips_tooltip')}},
+							},
+							nodes = {
+								{
+									n = G.UIT.C,
+									nodes = {
+									  create_toggle {
+										label = localize('morquips'),
+										ref_table = morenatsu_config,
+										ref_value = 'morenatsuquips'
+										},
+									},
+								},
+							}
+						},
+						-- Menu Logo
+						{
+							n = G.UIT.R,
+							config = { align = 'cl', tooltip = {text = {localize('morlogo_tooltip')}},},
+							nodes = {
+								{
+									n = G.UIT.C,
+									nodes = {
+									create_toggle {
+										label = localize('morlogo'),
+										ref_table = morenatsu_config,
+										ref_value = 'morenatsulogo'
+										},
+									},
+								},
+							},
+						},
+						
+					}
 				},
+				{
+					n = G.UIT.C,
+					config = {
+					padding = 0.25,
+					align = "cm"
+					},
+					nodes = {
+						-- Style
+						{
+							n = G.UIT.R,
+							config = { align = 'cm',},
+							nodes = {
+								create_option_cycle({
+									scale = 1, 
+									w = 4,
+									label = localize('morstyle'), 
+									opt_callback = 'callback_func',
+									options = {"Morenatsu", "Homecoming", "Rework"},
+									current_option = morenatsu_config.morenatsustyle,
+									value = 1,
+									ref_table = morenatsu_config,
+									ref_value = 'morenatsustyle',
+								}),
+							},
+						},
+						-- Quips
+						-- {
+							-- n = G.UIT.R,
+							-- config = {
+								-- align ='cm',
+								-- tooltip = {text = {localize('morquips_tooltip')}},
+							-- },
+							-- nodes = {
+								-- {
+									-- n = G.UIT.C,
+									-- nodes = {
+									  -- create_toggle {
+										-- label = localize('morquips'),
+										-- ref_table = morenatsu_config,
+										-- ref_value = 'morenatsuquips'
+										-- },
+									-- },
+								-- },
+							-- }
+						-- },
+					}
+				}
 			}
-		},
-		
-    }
-  }
+		}
+	}
+}
 end
 
 -- Credits Tab
@@ -153,27 +223,108 @@ SMODS.current_mod.extra_tabs = function()
 				config = {
 					padding = 0,
 					align = "cm"
-            },
-            nodes = {
-				{
-					n = G.UIT.T,
-					config = {
-						text = localize("credits_special_thanks"),
-						shadow = true,
-						scale = scale * 0.8,
-						colour = G.C.UI.TEXT_LIGHT
-					}
 				},
-				{
-					n = G.UIT.T,
-					config = {
-						text = "NAMES GO HERE",
-						shadow = true,
-						scale = scale * 0.8,
-						colour = MORENATSUBLUE
+				nodes = {
+					{
+						n = G.UIT.T,
+						config = {
+							text = "Morenatsu Sprites: ",
+							shadow = true,
+							scale = scale * 0.8,
+							colour = G.C.UI.TEXT_LIGHT
+						}
+					},
+					{
+						n = G.UIT.T,
+						config = {
+							text = "Samoji",
+							shadow = true,
+							scale = scale * 0.8,
+							colour = MORENATSUBLUE
+						}
 					}
 				}
-            }
+			},
+			{
+				n = G.UIT.R,
+				config = {
+					padding = 0,
+					align = "cm"
+				},
+				nodes = {
+					{
+						n = G.UIT.T,
+						config = {
+							text = "Homecoming Sprites: ",
+							shadow = true,
+							scale = scale * 0.8,
+							colour = G.C.UI.TEXT_LIGHT
+						}
+					},
+					{
+						n = G.UIT.T,
+						config = {
+							text = "Dev",
+							shadow = true,
+							scale = scale * 0.8,
+							colour = MORENATSUBLUE
+						}
+					}
+				}
+			},
+			{
+				n = G.UIT.R,
+				config = {
+					padding = 0,
+					align = "cm"
+				},
+				nodes = {
+					{
+						n = G.UIT.T,
+						config = {
+							text = "Rework Sprites: ",
+							shadow = true,
+							scale = scale * 0.8,
+							colour = G.C.UI.TEXT_LIGHT
+						}
+					},
+					{
+						n = G.UIT.T,
+						config = {
+							text = "55mango",
+							shadow = true,
+							scale = scale * 0.8,
+							colour = MORENATSUBLUE
+						}
+					}
+				}
+			},
+			{
+				n = G.UIT.R,
+				config = {
+					padding = 0,
+					align = "cm"
+				},
+				nodes = {
+					{
+						n = G.UIT.T,
+						config = {
+							text = localize("credits_special_thanks"),
+							shadow = true,
+							scale = scale * 0.8,
+							colour = G.C.UI.TEXT_LIGHT
+						}
+					},
+					{
+						n = G.UIT.T,
+						config = {
+							text = "NAMES GO HERE",
+							shadow = true,
+							scale = scale * 0.8,
+							colour = MORENATSUBLUE
+						}
+					}
+				}
 			},
 		    {
 				n = G.UIT.R,
@@ -245,4 +396,12 @@ function G.FUNCS.vrgithub(e)
 end
 function G.FUNCS.vrdonate(e)
   love.system.openURL("https://ko-fi.com/vrart1")
+end
+
+
+G.FUNCS.callback_func = function(args)
+  args = args or {}
+  if args.cycle_config and args.cycle_config.ref_table and args.cycle_config.ref_value then
+    args.cycle_config.ref_table[args.cycle_config.ref_value] = args.to_key
+  end
 end

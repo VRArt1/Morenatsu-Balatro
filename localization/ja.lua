@@ -3,12 +3,12 @@ return {
 		Joker={
 			-- New Jokers
 			j_mor_nanafuse={
-                name="Nanafuse",
+                name="七伏 博行",
                 text={
-					"Creates a {C:tarot}Tarot{} card",
+					"Creates a {C:tarot}タロット{} card",
 					"at end of each round",
                     "for {C:attention}7{} rounds",
-					"{C:inactive}(Must have room)",
+					"{C:inactive}(空きが必要)",
                 },
 			},
 		}
@@ -16,7 +16,7 @@ return {
     misc = {
 		dictionary={ 
 			-- Config
-			moryesrestart = "Restart Required",
+			moryesrestart = "再起動が必要です",
 			morlogo = "Main Menu Logo",
 				morlogo_tooltip = "Changes main menu logo.",
 			morquips = "Add Quips",
@@ -24,13 +24,13 @@ return {
 			morstyle = "Quips Style",
 			
 			-- Credits
-			credits = "Credits",
-			credits_thanks = "Thanks to",
-			credits_lead = "Lead Developer: ",
-			credits_localization = "JP Localization: ",
+			credits = "クレジット",
+			credits_thanks = "おかげで",
+			credits_lead = "主任開発者: ",
+			credits_localization = "日本語ローカライズ: ",
 			credits_quippers = "Quips: ",
-			credits_special_thanks = "Special Thanks: ",
-			donate = "Donate",
+			credits_special_thanks = "特別な感謝: ",
+			donate = "支持",
 		},
 		quips = {
 		
@@ -48,10 +48,10 @@ return {
 			-- Losses
 			mor_juuichiloss = {''},
 			mor_kounosukeloss = {''},
-			mor_kouyaloss = {'Don\'t give up the fight!'},
+			mor_kouyaloss = {'あきらめないで!'},
 			mor_kyoujiloss = {''},
 			mor_shinloss = {''},
-			mor_shunloss = {'It\'s alright! Woof!','You can try again!'},
+			mor_shunloss = {'大丈夫だよ！ワン！もう一度挑戦してもいいよ！'},
 			mor_soutarouloss = {''},
 			mor_tatsukiloss = {''},
 			mor_torahikoloss = {''},
