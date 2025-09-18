@@ -13,16 +13,19 @@ SMODS.Joker {
 	-- Logic
 	config = {
         extra = {
-            roundcounter = 1,
+            roundcounter = 7,
             scale = 1,
             rotation = 1,
             Tarot = 0,
             constant = 0
         }
     },
+	loc_vars = function(self, info_queue, card)
+        return {vars = {card.ability.extra.roundcounter}}
+    end,
 	calculate = function(self, card, context)
         if context.end_of_round and context.game_over == false and context.main_eval  then
-            if card.ability.extra.roundcounter == 7 then -- set back to 6
+            if card.ability.extra.roundcounter == 1 then -- set back to 6
                 local target_card = context.other_card
       local function juice_card_until_(card, eval_func, first, delay) -- balatro function doesn't allow for custom scale and rotation
           G.E_MANAGER:add_event(Event({
@@ -57,14 +60,14 @@ SMODS.Joker {
             else
                 return {
                     func = function()
-                    card.ability.extra.roundcounter = (card.ability.extra.roundcounter) + 1
+                    card.ability.extra.roundcounter = (card.ability.extra.roundcounter) - 1
                     return true
                 end,
                     extra = {
                         func = function()local created_consumable = false
                 if #G.consumeables.cards + G.GAME.consumeable_buffer < G.consumeables.config.card_limit then
                     created_consumable = true
-                    G.GAME.consumeable_buffer = G.GAME.consumeable_buffer + 1
+                    G.GAME.consumeable_buffer = G.GAME.consumeable_buffer - 1
                     G.E_MANAGER:add_event(Event({
                         func = function()
                             SMODS.add_card{set = 'Tarot', key = nil, key_append = 'joker_forge_tarot'}

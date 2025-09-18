@@ -7,7 +7,7 @@ return {
                 text={
 					"Creates a {C:tarot}Tarot{} card",
 					"at end of each round",
-                    "for {C:attention}7{} rounds",
+                    "for {C:attention}#1#{} rounds",
 					"{C:inactive}(Must have room)",
                 },
 			},
