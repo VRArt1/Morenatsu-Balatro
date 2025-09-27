@@ -4,6 +4,7 @@ SMODS.Joker {
 	-- no_collection = true,
 	atlas = 'morenatsu_jokers',
 	pos = { x = 0, y = 0 },
+	soul_pos = { x = 1, y = 0 },
 	rarity = 1,
 	blueprint_compat = true,
     eternal_compat = true,

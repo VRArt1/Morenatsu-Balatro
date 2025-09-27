@@ -1,3 +1,4 @@
 *.psd
 /Assets/EXTRA
 *.py
+*.log
